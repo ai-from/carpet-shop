@@ -1,0 +1,49 @@
+@import "variables"
+
+*
+  box-sizing: border-box
+
+html, body
+  margin: 0
+  padding: 0
+  font-family: monospace, Arial, sans-serif
+
+.layout
+  display: grid
+  min-height: 100vh
+  grid-template-rows: min-content 1fr min-content
+  width: 100%
+  //min-width: 1300px
+  max-width: 1366px
+  margin: 0 auto
+
+.indent, h1
+  padding: 0 32px
+
+h1
+  margin: 40px 0
+
+a
+  color: $gray
+  svg
+    color: $gray
+  &:hover
+    color: rgba($gray, .5)
+    svg
+      color: rgba($gray, .5)
+  &.router-link-active
+    color: $green
+    svg
+      color: $green
+
+input
+  outline: none
+
+.layout
+  display: grid
+  height: 100%
+  min-height: 100vh
+
+@media screen and (max-width: 767px)
+  .indent
+    padding: 0 16px !important
