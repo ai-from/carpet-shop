@@ -6,12 +6,12 @@
         <div class="img_wrap">
           <router-link :to="'/catalog/' + this.currentItem.id" v-if="!isWrapImg">
           <img
-              :src="'http://carpet-shop.just.ru.net/img/' + currentItem.image" alt="" title=""
+              :src="'http://carpet-shop.just.ru.net/api/img/' + currentItem.image" alt="" title=""
           >
           </router-link>
           <template v-else>
             <img class="no_link"
-                :src="'http://carpet-shop.just.ru.net/img/' + currentItem.image" alt="" title=""
+                :src="'http://carpet-shop.just.ru.net/api/img/' + currentItem.image" alt="" title=""
             >
           </template>
         </div> <!-- img_wrap -->
