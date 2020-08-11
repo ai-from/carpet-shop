@@ -27,7 +27,7 @@ export default {
       isLogin: state => state.mLogin.isLogin
     }),
     layout() {
-      return this.$route.meta.layout ?  this.$route.meta.layout + 'Layout' : 'loginLayout'
+      return this.$route && this.$route.meta && this.$route.meta.layout ?  this.$route.meta.layout + 'Layout' : 'loginLayout'
     }
   },
   components: {
@@ -59,12 +59,15 @@ export default {
   },
   mounted() {
     this.$route.meta.layout === 'login' ? void(0) : this.$router.push('/login')
-    axios.get(this.apiProductsURL)
+
+    if(this.$route && this.$route.params){
+      axios.get(this.apiProductsURL)
         .then(response => (this.SET_PRODUCTS(response.data))
           .then(this.checkCurrentProduct))
         .catch(e => {
           console.log(e)
         })
+    }
   }
 }
 </script>

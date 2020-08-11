@@ -66,10 +66,13 @@ const routes = [
   },
   {
     path: '/error',
-    alias: '*',
     name: 'notfound',
     component: () => import('../views/NotFound.vue'),
     meta: {layout: 'content'}
+  },
+  {
+    path: '*',
+    redirect: '/error'
   }
 ]
 

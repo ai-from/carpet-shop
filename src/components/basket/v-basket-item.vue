@@ -2,7 +2,7 @@
   <div class="v-basket-item">
     <div class="inner_wrap">
       <div class="image">
-        <img :src="'http://carpet-shop.just.ru.net/img/' + currentItem.image" alt="" title="">
+        <img :src="'http://carpet-shop.just.ru.net/api/img/' + currentItem.image" alt="" title="">
       </div>
       <div class="name">{{ currentItem.name }}</div>
       <div class="size">{{ currentItem.size }}</div>

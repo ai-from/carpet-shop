@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style lang="sass">
-
+  .not-found
+    h1
+      font-size: 20px
 </style>
