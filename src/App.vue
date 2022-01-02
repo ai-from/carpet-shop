@@ -19,7 +19,7 @@ import contentLayout from '@/layouts/contentLayout'
 export default {
   data() {
     return {
-      apiProductsURL: 'http://carpet-shop.just.ru.net/api/products.php'
+      apiProductsURL: 'https://carpet-shop.just.ru.net/api/products.php'
     }
   },
   computed: {
